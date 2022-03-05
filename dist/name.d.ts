@@ -7,6 +7,9 @@ export declare class Name {
      * @param gender
      */
     constructor(gender: EGender);
+    /**
+     * Introduces the generated name as a string like "firstname lastname"
+     */
     toString(): string;
     private static _generateLastname;
     private _generateFirstname;

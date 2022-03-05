@@ -1,4 +1,7 @@
-export const maleFirstnames = [
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.maleFirstnames = void 0;
+exports.maleFirstnames = [
     "Abdul",
     "Adi",
     "Audi",

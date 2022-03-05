@@ -27,3 +27,16 @@ console.log(maleNameObject.toString())
 // you can access the first and lastname with accessors
 console.log(femaleNameObject.firstname, femaleNameObject.lastname)
 ```
+
+Here are some sample names, evens are male:
+
+* Lin Highlyle
+* Rick Quideman
+* Larry Srilly
+* Arakan Moon
+* Case Mountilsworth
+* Chonglin Spokely
+* Far Highworth
+* Johnny Clark
+* Deming Day
+* Andrew Quilly

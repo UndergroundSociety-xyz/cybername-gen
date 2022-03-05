@@ -17,6 +17,9 @@ export class Name {
         this._firstname = this._generateFirstname()
     }
 
+    /**
+     * Introduces the generated name as a string like "firstname lastname"
+     */
     public toString() {
         return `${this.firstname} ${this.lastname}`
     }

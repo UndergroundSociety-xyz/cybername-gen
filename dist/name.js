@@ -1,7 +1,10 @@
-import { consonants, lastAfterConsonant, lastNames, lastPart1, lastPart2 } from "./constants/lastname";
-import { maleFirstnames } from "./constants/male";
-import { femaleFirstnames } from "./constants/female";
-export class Name {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EGender = exports.Name = void 0;
+const lastname_1 = require("./constants/lastname");
+const male_1 = require("./constants/male");
+const female_1 = require("./constants/female");
+class Name {
     /**
      * Constructs a random cyberpunkish full name according to gender
      * @param gender
@@ -11,29 +14,32 @@ export class Name {
         this._lastname = Name._generateLastname();
         this._firstname = this._generateFirstname();
     }
+    /**
+     * Introduces the generated name as a string like "firstname lastname"
+     */
     toString() {
-        return `${this._firstname} ${this.lastname}`;
+        return `${this.firstname} ${this.lastname}`;
     }
     static _generateLastname() {
         const lastTypeChance = Math.floor(Math.random() * 100);
         let lastname;
         if (lastTypeChance <= 15) {
-            const randomConsonant = consonants[Math.floor(Math.random() * consonants.length)];
-            const randomLastAfterConsonant = lastAfterConsonant[Math.floor(Math.random() * lastAfterConsonant.length)];
+            const randomConsonant = lastname_1.consonants[Math.floor(Math.random() * lastname_1.consonants.length)];
+            const randomLastAfterConsonant = lastname_1.lastAfterConsonant[Math.floor(Math.random() * lastname_1.lastAfterConsonant.length)];
             lastname = randomConsonant + randomLastAfterConsonant;
         }
         else if (lastTypeChance > 15 && lastTypeChance <= 30) {
-            const randomLastPart1 = lastPart1[Math.floor(Math.random() * lastPart1.length)];
-            const randomLastPart2 = lastPart2[Math.floor(Math.random() * lastPart2.length)];
+            const randomLastPart1 = lastname_1.lastPart1[Math.floor(Math.random() * lastname_1.lastPart1.length)];
+            const randomLastPart2 = lastname_1.lastPart2[Math.floor(Math.random() * lastname_1.lastPart2.length)];
             lastname = randomLastPart1 + randomLastPart2;
         }
         else {
-            lastname = lastNames[Math.floor(Math.random() * lastNames.length)];
+            lastname = lastname_1.lastNames[Math.floor(Math.random() * lastname_1.lastNames.length)];
         }
         return lastname;
     }
     _generateFirstname() {
-        const firstnames = this._gender === EGender.male ? maleFirstnames : femaleFirstnames;
+        const firstnames = this._gender === EGender.male ? male_1.maleFirstnames : female_1.femaleFirstnames;
         return firstnames[Math.floor(Math.random() * firstnames.length)];
     }
     get gender() {
@@ -46,9 +52,10 @@ export class Name {
         return this._firstname;
     }
 }
-export var EGender;
+exports.Name = Name;
+var EGender;
 (function (EGender) {
     EGender[EGender["male"] = 0] = "male";
     EGender[EGender["female"] = 1] = "female";
-})(EGender || (EGender = {}));
+})(EGender = exports.EGender || (exports.EGender = {}));
 //# sourceMappingURL=name.js.map

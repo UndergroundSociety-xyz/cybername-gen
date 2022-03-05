@@ -1,4 +1,7 @@
-export const lastNames = [
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.lastPart2 = exports.lastPart1 = exports.lastAfterConsonant = exports.consonants = exports.lastNames = void 0;
+exports.lastNames = [
     "Charlesworth",
     "Ball",
     "Smith",
@@ -1472,7 +1475,7 @@ export const lastNames = [
     "Zipface",
     "Zipper"
 ];
-export const consonants = [
+exports.consonants = [
     "B",
     "Br",
     "C",
@@ -1504,7 +1507,7 @@ export const consonants = [
     "Y",
     "Z",
 ];
-export const lastAfterConsonant = [
+exports.lastAfterConsonant = [
     "anson",
     "urton",
     "onic",
@@ -1538,7 +1541,7 @@ export const lastAfterConsonant = [
     "ulan",
     "ursor",
 ];
-export const lastPart1 = [
+exports.lastPart1 = [
     "Bur",
     "But",
     "Dav",
@@ -1579,7 +1582,7 @@ export const lastPart1 = [
     "Scan",
     "Sol",
 ];
-export const lastPart2 = [
+exports.lastPart2 = [
     "aite",
     "aticus",
     "artell",
