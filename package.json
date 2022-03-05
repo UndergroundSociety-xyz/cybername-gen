@@ -1,0 +1,16 @@
+{
+  "name": "@undergroundsociety/cybername-gen",
+  "description": "",
+  "version": "1.0.0",
+  "author": {
+    "name": "johnnyBoy",
+    "email": "johnnyboy-uc@protonmail.com"
+  },
+  "repository": "github.com:UndergroundSociety-xyz/cybername-gen",
+  "main": "dist/name.js",
+  "types": "dist/name.d.ts",
+  "dependencies": {
+    "ts-node": "^10.6.0",
+    "typescript": "^4.6.2"
+  }
+}
